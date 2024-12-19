@@ -14,9 +14,16 @@ def artcode_i(s):
         list: la liste des tuples (caractère, nombre d'occurences)
     """
     
-    # votre code ici
-
-    return [ ]
+    l=[]
+    z=1
+    for i in range (1,len(s)) : 
+        if s[i-1]==s[i]:
+            z+=1
+        else :
+            l.append((s[i-1],z))
+            z=1
+    l.append((s[i],z))
+    return l
 
 
 def artcode_r(s):
